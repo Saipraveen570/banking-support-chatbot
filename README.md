@@ -52,89 +52,76 @@ Frontend: Can be integrated with web/mobile UIs
 
 Version Control: Git & GitHub
 
-🧠 System Prompt (Core Logic)
+📐 Architecture Diagram
 
-The chatbot uses a robust, enterprise-ready system prompt with:
+Below is a simplified high-level architecture of the Banking Support Chatbot application:
 
-Response consistency rules
+                   ┌──────────────────────────┐
+                   │        User Interface     │
+                   │ (React + TypeScript App)  │
+                   └──────────────┬───────────┘
+                                  │
+                                  ▼
+                     ┌──────────────────────┐
+                     │   Chatbot Engine     │
+                     │     (App.tsx)        │
+                     └──────────────┬───────┘
+                                    │
+                         User Query │
+                                    ▼
+                 ┌──────────────────────────────┐
+                 │  Service Layer (services/)    │
+                 │  - messageService.ts          │
+                 │  - apiService.ts              │
+                 └──────────────┬───────────────┘
+                                │ Processed Query
+                                ▼
+                   ┌───────────────────────────┐
+                   │  Gemini 2.5 Flash (API)   │
+                   │  - System Prompt           │
+                   │  - Safety Guardrails       │
+                   │  - Response Generation     │
+                   └──────────────┬────────────┘
+                                  │ AI Response
+                                  ▼
+                     ┌──────────────────────────┐
+                     │ Response Formatter Layer │
+                     │ (utils/responseFormatter)│
+                     └──────────────┬──────────┘
+                                  │
+                                  ▼
+                   ┌──────────────────────────┐
+                   │   Display to User        │
+                   │   (UI Components)        │
+                   └──────────────────────────┘
 
-Escalation flows
+This architecture ensures:
 
-Safety guardrails
+Clear separation of UI, logic, and backend interaction
 
-Workflow mapping for all banking intents
+Safe, controlled communication with Gemini 2.5 Flash
 
-(Stored in prompts/system_prompt.txt)
+Scalable structure for adding intents, flows, and features
 
-📊 Key Banking Workflows Implemented
+📁 Project Structure (Actual Repository Structure)
+root/
+│
+├── components/
+│   └── ... UI components for chat interface
+│
+├── services/
+│   └── ... API and chatbot service handlers
+│
+├── App.tsx
+├── index.tsx
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+├── types.ts
+├── metadata.json
+├── faq.json
+├── .gitignore
+└── README.md
 
-Accounts: Balance guidance, statements, IFSC lookup
-
-Cards: Blocking, PIN reset, activation issues, online usage
-
-UPI: Failed transactions, incorrect recipient, verification failure
-
-Loans/EMI: Restructuring request guidance, double debit resolution
-
-KYC: Aadhaar mismatch, mobile number changes, branch escalation
-
-Digital Banking: Login issues, password reset, app crashes
-
-Fraud Alerts: Unauthorized transactions, dispute process
-
-🛡️ Safety & Compliance
-
-This chatbot follows strict safety protocols:
-
-Does not request or store sensitive customer information
-
-Rejects card numbers, CVV, PIN, Aadhaar, OTP patterns
-
-Encourages secure use of official channels
-
-Provides branch/hotline escalation when needed
-
-▶️ How to Run
-Using Google AI Studio
-
-Create a new Gemini setup
-
-Choose Gemini 2.5 Flash as the model
-
-Set Response MIME Type: text/plain
-
-Paste the system prompt into System Instructions
-
-Start chatting!
-
-Using backend code (optional)
-
-Refer to your preferred SDK:
-
-@google/generative-ai (Node.js)
-
-google-generativeai (Python)
-
-✅ Future Enhancements
-
-Full API integration with banking sandbox
-
-UI/UX banking dashboard for deployment
-
-Retrieval-Augmented Generation (RAG) for bank-specific policies
-
-Analytics logs for user queries and improvements
-
-Multi-language support
-
-🤝 Contributing
-
-Feel free to fork this project, submit pull requests, or suggest features.
-
-📜 License
-
-This project is open-source under the MIT License.
-
-⭐ Show Your Support
-
-If this project helped you, please star the repository on GitHub!
+root/ │ ├── prompts/ │ └── system_prompt.txt │ ├── src/ │ ├── app.js / app.py │ ├── handlers/ │ │ ├── payments.js │ │ ├── cards.js │ │ ├── kyc.js │ │ └── loans.js │ └── utils/ │ ├── safety.js │ └── response_formatter.js │ ├── tests/ │ └── banking_test_cases.md │ ├── docs/ │ └── workflow_diagrams.md │ └── README.md
