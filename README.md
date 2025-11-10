@@ -1,20 +1,140 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+Banking Support Chatbot
 
-# Run and deploy your AI Studio app
+A secure, AI-powered Banking Support Chatbot built using Google Gemini 2.5 Flash, designed to provide fast, empathetic, and accurate assistance for a wide range of banking-related queries. This project includes enterprise-grade safety guardrails, escalation flows, and structured conversational logic to ensure reliable and compliant customer support.
 
-This contains everything you need to run your app locally.
+🚀 Overview
 
-View your app in AI Studio: https://ai.studio/apps/drive/1MVW_s6wM35BgUhd5ypCHaAzLa2AslFWg
+This chatbot simulates a real banking support assistant, helping customers navigate:
 
-## Run Locally
+UPI transaction issues
 
-**Prerequisites:**  Node.js
+Debit/credit card services
 
+Fraud & suspicious activity alerts
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+KYC and profile updates
+
+Online/mobile banking problems
+
+Loan & EMI guidance
+
+Account information support
+
+General banking FAQs
+
+The system prompt is engineered to maintain high consistency, security, and empathetic responses, ideal for portfolio display or integration within a banking prototype.
+
+✅ Features
+
+AI-powered natural language understanding powered by Gemini 2.5 Flash
+
+Empathetic and structured responses using a proven response framework
+
+Secure interaction patterns with strict redaction and safety rules
+
+Multi-domain banking workflows
+
+Escalation pathways (App → Website → Hotline → Branch)
+
+Guardrails against sensitive data exposure (OTP, PIN, CVV, Aadhaar, card numbers)
+
+Highly configurable system prompt for production environments
+
+🛠️ Tech Stack
+
+Google Gemini 2.5 Flash (AI model)
+
+Google AI Studio / API integration
+
+Python / Node.js (optional) for backend integration
+
+Frontend: Can be integrated with web/mobile UIs
+
+Version Control: Git & GitHub
+
+🧠 System Prompt (Core Logic)
+
+The chatbot uses a robust, enterprise-ready system prompt with:
+
+Response consistency rules
+
+Escalation flows
+
+Safety guardrails
+
+Workflow mapping for all banking intents
+
+(Stored in prompts/system_prompt.txt)
+
+📊 Key Banking Workflows Implemented
+
+Accounts: Balance guidance, statements, IFSC lookup
+
+Cards: Blocking, PIN reset, activation issues, online usage
+
+UPI: Failed transactions, incorrect recipient, verification failure
+
+Loans/EMI: Restructuring request guidance, double debit resolution
+
+KYC: Aadhaar mismatch, mobile number changes, branch escalation
+
+Digital Banking: Login issues, password reset, app crashes
+
+Fraud Alerts: Unauthorized transactions, dispute process
+
+🛡️ Safety & Compliance
+
+This chatbot follows strict safety protocols:
+
+Does not request or store sensitive customer information
+
+Rejects card numbers, CVV, PIN, Aadhaar, OTP patterns
+
+Encourages secure use of official channels
+
+Provides branch/hotline escalation when needed
+
+▶️ How to Run
+Using Google AI Studio
+
+Create a new Gemini setup
+
+Choose Gemini 2.5 Flash as the model
+
+Set Response MIME Type: text/plain
+
+Paste the system prompt into System Instructions
+
+Start chatting!
+
+Using backend code (optional)
+
+Refer to your preferred SDK:
+
+@google/generative-ai (Node.js)
+
+google-generativeai (Python)
+
+✅ Future Enhancements
+
+Full API integration with banking sandbox
+
+UI/UX banking dashboard for deployment
+
+Retrieval-Augmented Generation (RAG) for bank-specific policies
+
+Analytics logs for user queries and improvements
+
+Multi-language support
+
+🤝 Contributing
+
+Feel free to fork this project, submit pull requests, or suggest features.
+
+📜 License
+
+This project is open-source under the MIT License.
+
+⭐ Show Your Support
+
+If this project helped you, please star the repository on GitHub!
