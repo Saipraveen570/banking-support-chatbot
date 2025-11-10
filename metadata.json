@@ -1,0 +1,7 @@
+{
+  "name": "Customer Support Chatbot",
+  "description": "A customer support chatbot for the banking industry that provides empathetic and helpful responses to user queries using the Gemini API.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

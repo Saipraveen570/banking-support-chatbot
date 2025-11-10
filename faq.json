@@ -1,0 +1,39 @@
+{
+  "faqs": [
+    {
+      "question": "What are your business hours?",
+      "answer": "Our branches are open from 9 AM to 5 PM, Monday to Friday. Our online banking services and this chat are available 24/7.",
+      "relatedQuestions": [
+        "What is the daily ATM withdrawal limit?",
+        "How do I report a lost or stolen card?"
+      ]
+    },
+    {
+      "question": "How do I reset my online banking password?",
+      "answer": "To reset your password, please go to the online banking login page and click on the 'Forgot Password?' link. You'll be guided through a secure verification process.",
+      "relatedQuestions": [
+        "How do I report a lost or stolen card?",
+        "What are your business hours?"
+      ]
+    },
+    {
+      "question": "What is the daily ATM withdrawal limit?",
+      "answer": "The standard daily ATM withdrawal limit is $500. If you need a temporary increase, please contact a customer support agent through our official phone line.",
+      "relatedQuestions": [
+        "What are your business hours?"
+      ]
+    },
+    {
+      "question": "Are my deposits insured?",
+      "answer": "Yes, Starlight Bank is a member of the FDIC. Your deposits are insured up to the maximum amount allowed by law.",
+      "relatedQuestions": []
+    },
+    {
+      "question": "How do I report a lost or stolen card?",
+      "answer": "To report a lost or stolen card, please call our 24/7 support line immediately at 1-800-555-0199 or log in to your online account to freeze your card.",
+      "relatedQuestions": [
+        "How do I reset my online banking password?"
+      ]
+    }
+  ]
+}
