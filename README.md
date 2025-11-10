@@ -124,4 +124,3 @@ root/
 ├── .gitignore
 └── README.md
 
-root/ │ ├── prompts/ │ └── system_prompt.txt │ ├── src/ │ ├── app.js / app.py │ ├── handlers/ │ │ ├── payments.js │ │ ├── cards.js │ │ ├── kyc.js │ │ └── loans.js │ └── utils/ │ ├── safety.js │ └── response_formatter.js │ ├── tests/ │ └── banking_test_cases.md │ ├── docs/ │ └── workflow_diagrams.md │ └── README.md
